@@ -130,7 +130,7 @@ function ansible {
         [Parameter(Mandatory=$False)]
         [String]$server = "lemp",
         [Parameter(Mandatory=$False)]
-        [String]$invFile = "./azure_cloud.ini",
+        [String]$invFile = "./aws_cloud.ini",
         [Parameter(Mandatory=$False)]
         [String]$privateKey = "~/.ssh/morsh_server_SSH",
         [Parameter(Mandatory=$False,Position=0)]
@@ -147,13 +147,13 @@ function ansiblePlaybook {
         [Parameter(Mandatory=$False)]
         [String]$user = "morsh92",        
         [Parameter(Mandatory=$False)]
-        [String]$invFile = "./azure_cloud.ini",
+        [String]$invFile = "./aws_cloud.ini",
         [Parameter(Mandatory=$False)]
         [String]$privateKey = "~/.ssh/morsh_server_SSH",
         [Parameter(Mandatory=$False)]
         [String]$Playbook = "./provisioning.yaml",
         [Parameter(Mandatory=$False,Position=0)]
-        [string]$fileSecrets = '~/.vault_pass_B12',
+        [string]$fileSecrets = '~/.vault_pass_C46',
         [Parameter(Mandatory=$False,Position=0)]
         [switch]$tagTST,
         [Parameter(Mandatory=$False,Position=0)]
@@ -183,7 +183,7 @@ function ansibleVault {
         [Parameter(Mandatory=$False,Position=0)]
         [switch]$ask,
         [Parameter(Mandatory=$False,Position=0)]
-        [string]$fileSecrets = '~/.vault_pass_B12'
+        [string]$fileSecrets = '~/.vault_pass_C46'
 
     )
     

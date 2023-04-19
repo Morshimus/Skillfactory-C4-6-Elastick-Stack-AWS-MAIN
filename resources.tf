@@ -291,9 +291,9 @@ resource "local_file" "aws_inventory" {
   content  = local.ansible_template
   filename = "${path.module}/aws_cloud.ini"
 
-  #provisioner "local-exec" {
-  #  command     = "Wait-Event -Timeout 60;. ./actions.ps1;ansible-playbook -secret"
-  #  interpreter = ["powershell.exe", "-NoProfile", "-c"]
-  #}
+  provisioner "local-exec" {
+    command     = "Wait-Event -Timeout 60;wsl -e /bin/bash -c 'cp .vault_pass_C46  ~/.vault_pass_C46 ; chmod 0600 ~/.vault_pass_C46';wsl -e /bin/bash -c 'cp morsh_server_SSH  ~/.ssh/morsh_server_SSH ; chmod 0600 ~/.ssh/morsh_server_SSH'; . ./actions.ps1;ansible-playbook -secret"
+    interpreter = ["powershell.exe", "-NoProfile", "-c"]
+  }
 
 }
