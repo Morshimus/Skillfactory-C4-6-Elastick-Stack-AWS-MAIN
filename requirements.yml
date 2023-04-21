@@ -2,3 +2,7 @@
 - src: https://github.com/Morshimus/SkillFactory-B11-Project-CI-Role-CI-Jenkins-Cluster
   name: Jenkins
   scm: git 
+
+- src: https://github.com/Morshimus/Skillfactory-C4-6-Elastick-Stack-AWS-Roles
+  name: ELK
+  scm: git 
