@@ -32,6 +32,35 @@ Jenkins_Docker_root=/opt/morsh_ci
 ![image](https://ams03pap004files.storage.live.com/y4mU-9ZBH-JIjsABjqENK4R4xEBwfo1oWekazg8s3sb2v8Rd2O54kOgUy-86JlWflCKqNqkcsRkmC-l2V02HrfcapETafv5qFllgYIzBu90PmgISs_6BdLNLhiuY1O5iJd1omOifsA7wvm7HvD8rvX9QfYuPPvDP_4zQ2vh-py6JGZpVbcoF0xYAu9Ka0djqAyC?encodeFailures=1&width=1560&height=801)
 
 
+```conf
+filebeat:
+  # List of inputs.
+  inputs:
+    [{"type": "log", "paths": ["/var/lib/docker/containers/*/*.log"]}]
+
+# Configure what outputs to use when sending the data collected by the beat.
+# Multiple outputs may be used.
+output:
+
+
+  ### Logstash as output
+  logstash:
+    # The Logstash hosts
+    hosts: ["172.16.10.102:5044"]
+
+    # Number of workers per Logstash host.
+    #worker: 1
+
+    # Optional load balance the events between the Logstash hosts
+    #loadbalance: true
+
+    # Optional index name. The default index name depends on the each beat.
+    # For Packetbeat, the default is set to packetbeat, for Topbeat
+    # top topbeat and for Filebeat to filebeat.
+    #index: filebeat
+
+```
+
 ## Infracost
 
 | **version**          | **0.2**                      |
