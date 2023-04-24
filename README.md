@@ -25,11 +25,11 @@ Jenkins_Docker_root=/opt/morsh_ci
 
 ```
 
-![image]()
+![image](https://ams03pap004files.storage.live.com/y4m4Rm-PmjpBI7vWWsLVa0t-U2CET63EYAvGpdsX1M5aYxv139K2Pjgd03pQfOtZ-ZBSjtiwf_OryiDmA_vQvv4-LOoCWZMPVv-W5ZSrCfimhRGIxwmkMwaPwGyX1Z7a1Z34pcBUY7Xsxf6y-ummzEmwSnSTQwdTXppA0QWQ8hgeZkRCISiGLteXwYUYQCfm8pF3TkmIQhuZvCufkvw7YQzpg/SF-C46-Ansible-inventory.jpg?psid=1&width=1797&height=657)
 
-![image]()
+![image](https://ams03pap004files.storage.live.com/y4mCJrXYoGLf5KBmfxw9mI5dldYng8e5RHMuB4qmLtFZo23ZJCzgI2FEcabD6KIhz264_cJRbHG5vzCjiW-dTxD-0-xUzi5m1N8cRFAW1J_X9XVOqJ6bi_4fgmSX8UO_0Ym82WH-ZQCMw2rC6MOFMMXgk-fqFBdcQjXWh7u2goeeXHdc6wavlYgAEVsL4WnFqup?encodeFailures=1&width=1658&height=801)
 
-![image]()
+![image](https://ams03pap004files.storage.live.com/y4mU-9ZBH-JIjsABjqENK4R4xEBwfo1oWekazg8s3sb2v8Rd2O54kOgUy-86JlWflCKqNqkcsRkmC-l2V02HrfcapETafv5qFllgYIzBu90PmgISs_6BdLNLhiuY1O5iJd1omOifsA7wvm7HvD8rvX9QfYuPPvDP_4zQ2vh-py6JGZpVbcoF0xYAu9Ka0djqAyC?encodeFailures=1&width=1560&height=801)
 
 
 ## Infracost
