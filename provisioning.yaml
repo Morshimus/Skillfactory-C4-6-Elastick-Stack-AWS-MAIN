@@ -1,8 +1,42 @@
 ---
+- hosts: monitoring
+  gather_facts: yes
+
+- hosts: morsh_Elasticsearch
+  become: true
+  roles:
+    - role: ELK/elasticsearch
+
+- hosts: morsh_Kibana 
+  become: true
+  roles:
+    - role: ELK/kibana
+  vars:
+    kibana_elasticsearch_url: "http://{{ hostvars[groups['monitoring'][0]]['ansible_ens5']['ipv4']['address'] }}:9200"
+
+- hosts: morsh_Logstash
+  become: true
+  roles:
+    - role: ELK/logstash
+  vars:
+    logstash_syslog_port: 10514
+    logstash_elasticsearch_hosts:
+       - "http://{{ hostvars[groups['monitoring'][0]]['ansible_ens5']['ipv4']['address'] }}:9200"	
+
+
 - hosts: Jenkins-CI
   gather_facts: yes
   become: yes   
   roles:
     - role: Infrastructure/docker
-    - role: Infrastructure/postgresql
     - role: Jenkins
+    - role: ELK/filebeat
+      vars:
+        filebeat_inputs:
+          - type: log
+            paths:
+            - "/var/lib/docker/containers/*/*.log"
+        filebeat_output_elasticsearch_enabled: false
+        filebeat_output_logstash_enabled: true
+        filebeat_output_logstash_hosts:
+          - "{{ hostvars[groups['monitoring'][2]]['ansible_ens5']['ipv4']['address'] }}:5044"

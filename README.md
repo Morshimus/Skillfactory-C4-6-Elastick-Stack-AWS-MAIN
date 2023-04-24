@@ -2,6 +2,17 @@
 
 ## [Roles](https://github.com/Morshimus/Skillfactory-C4-6-Elastick-Stack-AWS-Roles)
 
+## Задание C4.6.1
+
+* [x] - :one: **Разверните на ~~Server2 Elasticsearch+Kibana~~ кластер ELK в облаке AWS c динамической инвентаризацией. Настройте визуализацию логов Kibana на ~~ней~~ нем самом. ~~Log shipper используйте любой на ваш выбор~~Filebeat.**
+**Пришлите ментору для проверки скриншот интерфейса Kibana с ее логами и конфиг-файл log shipper.**
+
+## Задание C4.6.2
+
+* [x] - :two: **Настройте на Server1 с помощью ~~RSyslog~~ Filebeat отправку логов любого приложения (~~nginx~~/Jenkins Cluster Docker Compose/~~что-то еще на ваш выбор~~) в ~~Elasticsearch~~ на ELK - в Logstash.**
+
+* [x] - :three: **Проверьте через Kibana, что логи доставляются (в пункте Discover).**
+
 ## Infracost
 
 | **version**          | **0.2**                      |

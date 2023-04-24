@@ -105,12 +105,21 @@ resource "aws_security_group" "allow_ingeress_egress" {
   }
 
   ingress {
-    description = "Logstash for Internal"
+    description = "Logstash for Internal filebeat"
     from_port   = 5044
     to_port     = 5044
     protocol    = "tcp"
     cidr_blocks = ["172.16.10.0/24"]
   }
+
+
+  ingress {
+    description = "Logstash for Internal syslog"
+    from_port   = 10514
+    to_port     = 10514
+    protocol    = "tcp"
+    cidr_blocks = ["172.16.10.0/24"]
+  }  
 
 
   ingress {
@@ -186,7 +195,7 @@ module "aws_instances_elk" {
   image_name    = var.image_name
   image_owners  = var.image_owners
   group         = var.group
-  name          = "morsh-${each.key}"
+  name          = "morsh_${each.key}"
   instance_type = var.instance_type
 
   monitoring = true
