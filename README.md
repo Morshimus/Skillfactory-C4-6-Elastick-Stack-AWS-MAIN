@@ -1,6 +1,6 @@
 # Skillfactory-C4-6-Elastic-Stack-AWS
 
-## [Roles](https://github.com/Morshimus/Skillfactory-C4-6-Elastick-Stack-AWS-Roles)
+## [ELK Cluster Roles](https://github.com/Morshimus/Skillfactory-C4-6-Elastick-Stack-AWS-Roles)
 
 ## Задание C4.6.1
 
