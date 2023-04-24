@@ -119,7 +119,7 @@ resource "aws_security_group" "allow_ingeress_egress" {
     to_port     = 10514
     protocol    = "tcp"
     cidr_blocks = ["172.16.10.0/24"]
-  }  
+  }
 
 
   ingress {
